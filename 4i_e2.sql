@@ -78,3 +78,5 @@ inkrementowany, nie może przyjmować wartości pustych
 ‒ wpis typu tekstowego
 ‒ uzytkownik_id typu całkowitego dodatniego, nie może przyjmować wartości pustych.
 */
+SELECT osoby.id_o, osoby.nazwisko, hobby.nazwa FROM osoby
+right join hobby on osoby.id_h = hobby.id_h WHERE id_o is NULL;
