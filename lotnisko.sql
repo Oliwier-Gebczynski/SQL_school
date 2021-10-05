@@ -42,6 +42,18 @@ SELECT odloty.nr_rejsu, samoloty.linie FROM odloty INNER JOIN samoloty on samolo
 UPDATE przyloty SET status_lotu = "planowy" WHERE nr_rejsu = "LH9829";
 
 /*ZADANIE 5*/
-SELECT samoloty.typ, samoloty.linie FROM samoloty LEFT JOIN przyloty ON samoloty.id = przyloty.id WHERE samoloty.id IS NULL
+SELECT samoloty.typ, samoloty.linie FROM samoloty LEFT JOIN przyloty ON samoloty.id = przyloty.id WHERE samoloty.id IS NULL;
+
+/*ZADANIE 6*/
+SELECT id, nr_rejsu, czas, kierunek, status_lotu FROM przyloty ORDER BY czas;
+
+/*ZADANIE 7*/
+SELECT COUNT(id) FROM przyloty WHERE czas BETWEEN '10:00' AND '10:59';
+
+/*ZADANIE 8*/
+SELECT przyloty.nr_rejsu, samoloty.typ FROM przyloty INNER JOIN samoloty ON przyloty.samoloty_id = samoloty.id WHERE przyloty.kierunek = "Warszawa";
+
+/*ZADANIE 9*/
+UPDATE odloty SET status_lotu = "opoznienie 20 min" WHERE nr_rejsu = "LX5673";
 
 
