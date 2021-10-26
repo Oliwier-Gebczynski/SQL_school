@@ -29,3 +29,9 @@ CREATE TABLE wizyty(
 )
 
 desc wizyty;
+
+# 1. Wyświetl imiona i nazwiska pacjentow oraz daty wizyt.
+# 2. Wyświetl imiona i nazwiska pacjentow oraz daty wizyt pacjentow z Knurowa.
+# 3. Wyświetl imiona i nazwiska lekarzy przyjmujących w maju dowolnego roku.
+# 4. Wyświetl imiona i nazwiska pacjentów przyjmowanych przez chirurgow.
+# 5. Wyświetl (unikalne) imiona i nazwiska pacjentów przyjmowanych przez chirurgow, mieszkajacych w Opolu.  
