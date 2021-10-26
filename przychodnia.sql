@@ -31,7 +31,29 @@ CREATE TABLE wizyty(
 desc wizyty;
 
 # 1. Wyświetl imiona i nazwiska pacjentow oraz daty wizyt.
+    SELECT pacjenci.pacjent_imie, pacjenci.pacjent_nazwisko, wizyty.data_wizyty 
+    from wizyty inner join pacjenci on wizyty.pacjent = pacjenci.id_pacjenta;
+
 # 2. Wyświetl imiona i nazwiska pacjentow oraz daty wizyt pacjentow z Knurowa.
+    SELECT Distinct pacjenci.pacjent_imie, pacjenci.pacjent_nazwisko, wizyty.data_wizyty 
+    from wizyty inner join pacjenci on wizyty.pacjent = pacjenci.id_pacjenta 
+    WHERE miasto = "Knurow";
+
 # 3. Wyświetl imiona i nazwiska lekarzy przyjmujących w maju dowolnego roku.
+    SELECT Distinct lekarz_imie, lekarz_nazwisko 
+    from lekarze inner join wizyty on wizyty.lekarz = lekarze.id 
+    where wizyty.data_wizyty like '%-05-%';
+
 # 4. Wyświetl imiona i nazwiska pacjentów przyjmowanych przez chirurgow.
+    SELECT Distinct pacjenci.pacjent_imie, pacjenci.pacjent_nazwisko, lekarze.specjalizacja
+    from wizyty 
+    inner join lekarze on wizyty.lekarz = lekarze.id_leakrza 
+    inner join pacjenci on wizyty.pacjent = pacjenci.id_pacjenta 
+    where lekarze.specjalizacja = 'Chirurg' 
+
 # 5. Wyświetl (unikalne) imiona i nazwiska pacjentów przyjmowanych przez chirurgow, mieszkajacych w Opolu.  
+    SELECT Distinct pacjenci.pacjent_imie, pacjenci.pacjent_nazwisko, lekarze.specjalizacja, pacjenci.miasto
+    from wizyty 
+    inner join lekarze on wizyty.lekarz = lekarze.id_leakrza 
+    inner join pacjenci on wizyty.pacjent = pacjenci.id_pacjenta 
+    where lekarze.specjalizacja = 'Chirurg' and pacjenci.miasto = "Opole"
