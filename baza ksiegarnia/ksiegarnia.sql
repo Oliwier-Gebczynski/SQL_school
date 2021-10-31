@@ -113,3 +113,26 @@ INSERT INTO `zamowienia` (`idzamowienia`, `idklienta`, `idksiazki`, `data`, `sta
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+/*Zadanie 1 - Wyswietl wszystkie informacje o ksizkach, ulozone alfabetycznie wg nazwiska autora*/
+SELECT tytul, imieautora, nazwiskoautora, cena FROM ksiazki ORDER BY nazwiskoautora;
+
+/*Zadanie 2 - Wyswietl wszystkie informacje o wyslanych zamowieniach*/
+SELECT idzamowienia, idklienta, idksiazki, data, status FROM zamowienia WHERE status="wyslano";
+
+/*Zadanie 3 - Wyawietl wszystkie informacje o klientach z nazwiskiem Skorupa*/
+SELECT idklienta, imie, nazwisko, miejscowosc FROM klienci WHERE nazwisko="Skorupa";
+
+/*Zadanie 4 - Wyswietl wszystkie informacje o ksiazkach, zawierajacych wyrazenie "PHP" w tytule*/
+SELECT idksiazki, tytul, imieautora, nazwiskoautora, cena FROM ksiazki WHERE tytul LIKE'%PHP%'
+
+/*Zadanie 5 -  Wyswietl wszystkie informacje o zamowieniach ulozone od ostatnio dokonanego*/
+SELECT DIST * FROM zamowienia ORDER BY data DESC;
+
+/*Zadanie 6 - Wyswietl informacje o zamowieniach: imie i nazwisko klienta zamawiajacego, id zamowienia, date zamowienia*/
+SELECT klienci.imie, klienci.nazwisko, zamowienia.idzamowienia, zamowienia.data FROM zamowienia INNER JOIN klienci ON klienci.idklienta = zamowienia.idklienta;
+
+/*Zadanie 7 - Jak w punkcie 6, w nazwach tabel zastosuje aliase (dowolne)*/
+
+SELECT osoby.imie, osoby.nazwisko, zlecenie.idzamowienia, zlecenie.data FROM zamowienia as zlecenie INNER JOIN klienci as osoby ON osoby.idklienta = zlecenie.idklienta;
