@@ -1,0 +1,10 @@
+1. Wyœwietl wszystkie informacje o ksi¹¿kach, u³o¿one alfabetycznie wg nazwiska autora
+2. Wyœwietl wszystkie informacje o wys³anych zamówieniach
+3. Wyœwietl wszystkie informacje o klientach klientach z nazwiskiem Skorupa
+4. Wyœwietl wszystkie informacje o ksi¹¿kach, zawieraj¹cych wyra¿enie "PHP" w tytule
+5. Wyœwietl wszystkie informacje o zamówieniach u³o¿one od ostatnio dokonanego
+6. Wyœwietl informacje o zamówieniach: imiê i nazwisko klienta zamawiaj¹cego, id zamówienia, datê zamówienia
+7. Jak w punkcie 7, w nazwach tabel zastosuje aliase (dowolne)
+8. Wyœwietl imiona, nazwiska i miasta osób, które zamówi³y kiedykolwiek ksi¹¿kê nr 5
+9. Wyœwietl jakie ksi¹¿ki zamówi³a osoba o nazwisku Karenina
+10. Wyœwietl informacje o zamówieniach dokonane przez osoby o nazwisku Rutkowski u³o¿one wg daty od najpóŸniej dokonanych (imiê i nazwisko osoby zamawiaj¹cej, id, datê i status zamówienia, tytu³ zamówionej ksi¹¿ki)
