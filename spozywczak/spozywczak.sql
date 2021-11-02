@@ -2,12 +2,13 @@ create database spozywczak_4i;
 
 use spozywczak_4i;
 
-create table produkty (id int auto_increment primary key, 
-                       nazwa varchar (20), 
-		               dostawca varchar(20), 
-                       ilosc int, 
-                       cena_sz float);
-
+create table produkty (
+    id int auto_increment primary key, 
+    nazwa varchar (20), 
+	dostawca varchar(20), 
+    ilosc int, 
+    cena_sz float
+);
 
 insert into produkty values ('', 'maslo', 'mlekol', 23, 2.30);
 insert into produkty values ('', 'mleko', 'mlekol', 31, 2.50);
@@ -33,3 +34,36 @@ insert into produkty values ('', 'rogale', 'chippol', 34, 2.55);
 insert into produkty values ('', 'oliwki', 'przetworpol', 3, 9.05);
 
 select * from produkty;
+-- wyswietlenie ilosci rekordow
+SELECT count(id) as "Liczba produktow" FROM produkty;
+
+
+--wyswietlenie ilosci produktow dostarczanych przez dostawcow, ktorzy dostarczaja wiecej niz jeden produkt
+SELECT produkty.dostawca, count(id) as "Liczba produktow" 
+FROM produkty 
+GROUP BY dostawca
+--przez having mozna wskazac tych ktorzy dostarczaja wiecej niz jeden 
+HAVING count(id)>1;
+
+
+--sumowanie wartosci wszytkich produktów do dwoch miejsc po przecinku 
+SELECT concat(round(sum(cena_sz*ilosc), 2), " zł") as "suma"
+FROM produkty;
+
+
+--sredia cena produktu dostarczana przez dostawce 
+SELECT dostawca, concat(round(avg(cena_sz), 2)," zł") as "Średnia cena"
+FROM produkty
+GROUP BY dostawca;
+
+
+--wysietlenie najtanszego produktu z nazwa 
+SELECT nazwa,cena_sz as "Cena"
+FROM produkty
+WHERE cena_sz = (select min(cena_sz) FROM produkty);
+
+--dla max
+SELECT nazwa,cena_sz as "Cena"
+FROM produkty
+WHERE cena_sz = (select max(cena_sz) FROM produkty);
+
