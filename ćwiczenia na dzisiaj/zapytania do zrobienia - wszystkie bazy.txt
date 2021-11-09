@@ -1,0 +1,24 @@
+1. Zapytania do bazy spozywczak:
+
+1.1.Wyœwietlenie iloœci rekordów przechowywanych w danej tablicy
+1.2.Wyœwietlenie wartoœci wszystkich produtków w bazie, z zaokr¹gleniem do dwóch miejsc po przecinku
+1.3.Wyœwietlenie najtañszego produktu wraz z nazw¹
+1.4.Zliczenie iloœci produktów dostarczynych przez kazdego dostawce
+1.5.Zliczenie iloœci produktów dostarczynych przez dostawce,który dostarcza wiêcej ni¿ jeden produkt
+1.6.Obliczenie œredniej ceny produktów dostarczanych przez ka¿dego dostawcê
+
+
+2. Zapytania do bazy stanowiska:
+
+2.1.Wyœwietlenie œredniej pensji na danym stanowisku
+2.2.Wyœwietlenie œredniej pensji na danym stanowisku uwzglêdniaj¹æ pensje wiêksze ni¿ 3000z³
+ 
+
+3.Zapytania do bazy pracownik:
+
+3.1.Wyœwietlenie iloœci pracowników w ka¿dym dziale
+3.2.Wyœwietlenie iloœci pracowników w dziale , w którym pracuje wiêcej ni¿ jeden pracownik
+3.3.Wyœwietlenie nazwy dzia³u, iloœci pracowników w dziale, œredniej wieku oraz wieku najm³odzego i najstarszego pracownika.
+3.4.Wyœwietlenie najm³odszego pracownika w ka¿dy dziale
+3.5.Wyœwietlenie najstarszego pracownika w ka¿dy dziale
+
