@@ -1,0 +1,37 @@
+﻿
+
+1. Zaloguj się na konto ROOT.
+2. Utwórz super-usera z pełnymi prawami do wszystkiego (nazwa to 4bsuperuser4b).
+3. Zaloguj się na konto 4bsuperuser4b.
+4. Utwórz bazę "zwierzaki4b".
+5. Do bazy dodaj 3 tabele (kopiuj-wklej):
+	5.1. Create table kotki (idkotek int auto_increment primary key, 
+				kotkirasa varchar(45),
+				kotkikolor varchar (45));
+	5.2. Create table pieski (idpieski int auto_increment primary key, 
+				pieskirasa varchar(45),
+				pieskikolor varchar (45));
+	5.3. Create table swinki (idswinki int auto_increment primary key, 
+				swinkirasa varchar(45),
+				swinkikolor varchar (45));
+6. Do tabel dodaj rekordy (kopiuj-wklej):
+	6.1 Insert into kotki values ('','mustafa','rudy');
+	6.2 Insert into kotki values ('','rafasa','biały');
+	6.3 Insert into kotki values ('','mustafa','zielony');
+	6.4 Insert into pieski values ('','kundel','wielobarwny');
+	6.5 Insert into pieski values ('','jamnik','czarny');
+	6.6 Insert into pieski values ('','bernardyn','brazowy');
+	6.7 Insert into swinki values ('','rasa1','rozowy');
+	6.8 Insert into swinki values ('','rasa2','filetowy');
+	6.9 Insert into swinki values ('','rasa3','niebieski');
+7. Utwórz uzytkownikow:
+	7.1. admin_zwierzaki mający pełne praca do całej bazy zwierzaki;
+	7.2. admin_kotki mający pełne prawa do tabeli kotki;
+	7.3. admin_pieski mający pełne prawa do tabeli pieski;
+	7.4. admin_swinki mający pełne prawa do tabeli swinki;
+	7.5. maniek mający prawo do wyświetlania danych z tabeli kotki;
+	7.6. jozek mający prawo do dodawania, usuwania oraz wyswietlania danych z tabeli pieski;
+	7.7. bronek mający prawo do tworznia, aktualizowania tabel w bazie, oraz do wyświetlania danych z tabeli kotki i swinki.
+8. Wykonaj zrzu ekranowy z zadania 2, 3 i 7.
+
+ 
