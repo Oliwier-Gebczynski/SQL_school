@@ -29,3 +29,17 @@ alternatywnie:
 
 UPDATE mysql.user SET authentication_string = PASSWORD('nowe_hasło') WHERE User = 'użytkownik' AND Host = 'localhost';
 FLUSH PRIVILEGES;
+
+-- ZADANIE 2 
+
+create user '4isuperuser4i'@'localhost';
+grant all PRIVILEGES on *.* to '4isuperuser4i'@'localhost' identified by 'qwerty' with grant option;
+
+
+-- ZADANIE 4
+
+CREATE DATABASE zwierzaki4i
+
+-- ZADANIE 6 
+
+
