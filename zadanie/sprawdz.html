@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Miernik jakosci hasła</title>
+		<link rel="stylesheet" href="styl2.css" />
+	</head>
+	<body>
+		<header>
+			<h1><a href="index.html">Weryfikacja jakości hasła</a></h1>
+		</header>
+		<section class="panel_lewy">
+			<h2>Wybierz opcję</h2>
+			<ul>
+				<li><a href="sprawdz.html">Sprawdz haslo</a></li>
+				<li><a href="reguly.html">Reguly tworzenia hasla</a></li>
+			</ul>
+		</section>
+		<section class="panel_prawy">
+			<label>Wpisz haslo: <input id="password" type="password"/></label>
+			<button id="button">Weryfikuj</button>
+			<p id="wynik"></p>
+		</section>
+		<footer>
+			<h3>Wskaznik jakosci hasla</h3>
+			<p>Twórca strony: 0123456789</p>
+		</footer>
+
+		<script>
+			const button = document.querySelector("#button");
+			const wynik = document.querySelector("#wynik");
+			wynik.innerText = "Hasło jest puste";
+			wynik.style.color = "red";
+
+			button.addEventListener("click", function() {
+				let znaki = [];
+				let cyfry = [];
+				const input = document.querySelector("#password").value;
+				const passwordArr = input.split("");
+
+				//for (i = 0; i < input.lenght; i++) {
+				//console.log(input[i]);
+				//passwordArr.push(input[i]);
+				//}
+
+				passwordArr.forEach(znak => {
+					if (isNaN(znak)) {
+						znaki.push(znak);
+					} else {
+						cyfry.push(znak);
+					}
+				});
+				console.log(znaki);
+				console.log(znaki.length);
+				console.log(cyfry);
+				console.log(cyfry.length);
+
+				if (znaki.length >= 7 && cyfry.length >= 1) {
+					wynik.innerText = "Hasło jest dobre";
+					wynik.style.color = "green";
+				} else if (znaki.length >= 4 && znaki.length <= 6 && cyfry.length >= 1) {
+					wynik.innerText = "Hasło jest srednie";
+					wynik.style.color = "blue";
+				} else {
+					wynik.innerText = "Hasło jest slabe";
+					wynik.style.color = "yellow";
+				}
+			});
+		</script>
+	</body>
+</html>

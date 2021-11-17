@@ -1,0 +1,60 @@
+header {
+	background-color: #08826a;
+	height: 60px;
+	font-family: Verdana;
+	text-align: center;
+}
+
+.panel_lewy {
+	background-color: #1e9880;
+	height: 550px;
+	width: 30%;
+	float: left;
+}
+
+.panel_prawy {
+	background-color: #9ac8bf;
+	height: 550px;
+	width: 70%;
+	text-align: center;
+	float: left;
+}
+
+footer {
+	background-color: #08826a;
+	font-family: Verdana;
+	color: white;
+	text-align: right;
+	clear: both;
+}
+
+a {
+	color: white;
+}
+
+img {
+	margin: 20px;
+	padding: 15px;
+	border: 2px dotted#1E9880;
+}
+
+table {
+	margin: 20px;
+	border: solid 1px;
+	width: 80%;
+}
+
+tr:hover {
+	background-color: green;
+	color: white;
+}
+
+.naglowki {
+	background-color: #1e9880;
+	border: solid 1px;
+}
+
+.komorki {
+	border: solid 1px;
+	text-align: right;
+}
